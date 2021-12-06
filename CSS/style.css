@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: rgb(44, 44, 44);
+}
+
+
+/*Hero*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+}
+
+.logo {
+    color: whitesmoke;
+    font-family: 'Prata', serif;
+    font-weight: 500;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 12px 14px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+nav button {
+    padding: 12px 14px;
+    background: yellow;
+    border: none;
+    cursor: pointer;
+}
+
+.first {
+    background: #111;
+    position: relative;
+    z-index: 5;
+    max-width: 90rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+    min-height: 124vh;
+}
+
+.first .help {
+    margin-top: 5%;
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    font-size: 45px;
+    color: whitesmoke;
+    max-width: 25ch;
+}
+
+.first p {
+    color: grey;
+    max-width: 60ch;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0;
+    color: whitesmoke;
+}
+
+.projects h2 {
+    margin: 5px 0;
+    font-size: 35px;
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.first-box {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.second-box {
+    position: relative;
+    flex-basis: 50%;
+    margin-left: 50px;
+    margin-top: -1%;
+}
+
+
+/*Second Section*/
+
+.second {
+    background: rgb(44, 44, 44);
+    position: relative;
+    padding: 0 4rem;
+    max-width: 90rem;
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    color: grey;
+}
+
+.left {
+    flex-basis: 50%;
+    position: relative;
+}
+
+.left h1 {
+    color: whitesmoke;
+    margin-bottom: 5%;
+}
+
+.right {
+    position: relative;
+    flex-basis: 50%;
+    margin-left: 50px;
+}
+
+
+/*CTA*/
+
+.cta {
+    background: black;
+    position: relative;
+    padding: 0 4rem;
+    min-height: 40vh;
+}
+
+.cta h1 {
+    color: whitesmoke;
+    margin-top: 40px;
+    font-size: 31px;
+    font-family: 'Prata', serif;
+    font-weight: 400;
+}
+
+.cta button {
+    margin: 5px 0;
+    padding: 12px 14px;
+    background: yellow;
+    cursor: pointer;
+    border: none;
+}
+
+.cta p {
+    line-height: 1.6;
+    color: grey;
+    max-width: 60ch;
+}
+
+
+/*Footer*/
+
+footer {
+    position: relative;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1%;
+    height: 5vh;
+}
+
+footer .logo {
+    color: whitesmoke;
+    font-family: 'Prata', serif;
+    font-weight: 500;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 2px 4px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+footer ul li a img {
+    width: 15px;
+    cursor: pointer;
+}
