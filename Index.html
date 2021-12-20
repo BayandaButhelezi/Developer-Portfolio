@@ -11,17 +11,23 @@
 
 <body>
     <section class="first">
-        <nav>
-            <h1 class="logo">Jonathan Spencer</h1>
-            <ul>
+
+        <header class="primary-header flex">
+            <div>
+                <h1 class="logo">Jonathan Spencer</h1>
+            </div>
+    
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only"></span></button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
                 <li><a href="#">Articles</a></li>
                 <li><a href="#">Chats</a></li>
                 <li><a href="#">Awards</a></li>
                 <li><a href="#">About</a></li>
-            </ul>
+                </ul>
+            </nav>
             <button>Get In Touch</button>
-        </nav>
-
+        </header>
 
         <h1 class="help">Helping companies build better, scalabe software.</h1>
         <p>Award-winning web developer and author, with over 15+ years of working experience with Fortune 500 companies like Apple, Google, Facebook, and more.</p>
@@ -85,5 +91,18 @@
         </ul>
     </footer>
 </body>
+<script>
+    const primaryNav = document.querySelector('.primary-navigation');
+    const navToggle = document.querySelector('.nav-toggle');
 
+    navToggle.addEventListener('click', () => {
+        const visibility = primaryNav.getAttribute('data-visible');
+
+        if (visibility === "false"){
+            primaryNav.setAttribute('data-visible', true);
+        } else if (visibility === "true"){
+            primaryNav.setAttribute('data-visible', false);
+        }
+    });
+</script>
 </html>

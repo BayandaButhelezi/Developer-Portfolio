@@ -14,38 +14,86 @@ body {
 
 /*Hero*/
 
-nav {
+.flex{
     display: flex;
-    justify-content: space-between;
+    gap: var(--gap, 2rem);
+}
+
+/*primary-header*/
+
+.primary-header{
     align-items: center;
-    padding-top: 1%;
+    justify-content: space-between;
+    background: transparent;
 }
 
-.logo {
+.logo{
+    margin: 1rem;
     color: whitesmoke;
-    font-family: 'Prata', serif;
-    font-weight: 500;
 }
 
-nav ul {
+.nav-toggle{
+    display: none;
+}
+
+/*primary-navigation*/
+
+.primary-navigation{
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    padding: 12px 14px;
-}
-
-nav ul li a {
+.primary-navigation a{
     text-decoration: none;
-    color: grey;
+    color: whitesmoke;
 }
 
-nav button {
-    padding: 12px 14px;
-    background: yellow;
-    border: none;
-    cursor: pointer;
+.primary-navigation span{
+    font-weight: 700;
+    margin-inline-end: .75em;
+}
+
+button{
+    display: none;
+    background: transparent;
+}
+
+@media (max-width: 35em){
+    .primary-navigation{
+        z-index: 1000;
+        gap: 4em;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+        transform: translateX(100%);
+        transition: transform 350ms ease-in;
+    }
+
+    .primary-navigation a{
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .primary-navigation[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    .nav-toggle{
+        display: block;
+        position: absolute;
+        width: 2rem;
+        aspect-ratio: 1;
+        background: url(menu.svg);
+        border: none;
+        top: 1rem;
+        right: 2rem;
+        z-index: 9999;
+    }
 }
 
 .first {
@@ -70,6 +118,30 @@ nav button {
 .first p {
     color: grey;
     max-width: 60ch;
+}
+
+@media (max-width: 933px){
+    .first {
+        background: #111;
+        z-index: 5;
+        padding: 0 4rem;
+        margin-left: -50px;
+        min-height: 124vh;
+    }
+    .first .help {
+        margin-top: 5%;
+        font-family: 'Prata', serif;
+        font-weight: 400;
+        font-size: 21px;
+        color: whitesmoke;
+        max-width: 25ch;
+    }
+    
+    .first p {
+        color: grey;
+        width: 90%;
+        font-size: 12px;
+    }
 }
 
 .projects {
@@ -98,6 +170,39 @@ nav button {
     flex-basis: 50%;
     margin-left: 50px;
     margin-top: -1%;
+}
+
+@media(max-width: 1178px){
+    .projects{
+        flex-direction: column-reverse;
+    }
+
+    .projects h2 {
+        margin: 5px 0;
+        font-size: 25px;
+        font-family: 'Prata', serif;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .first-box{
+        flex-basis: 100%;
+        margin-top: 50px;
+        margin-left: 5px;
+    }
+
+    .first-box img{
+        width: 100%;
+    }
+
+    .second-box{
+        flex-basis: 100%;
+        margin-left: 5px;
+    }
+    
+    .second-box img{
+        width: 100%;
+    }
 }
 
 
@@ -134,9 +239,34 @@ nav button {
     margin-left: 50px;
 }
 
+@media(max-width: 903px){
+
+    .second {
+        background: rgb(44, 44, 44);
+        position: relative;
+        padding: 0 1rem;
+        max-width: 90rem;
+    }
+
+    .text{
+        flex-direction: column;
+    }
+
+    .left{
+        flex-basis: 100%;
+        margin-top: 50px;
+        margin-left: 5px;
+    }
+
+    .right{
+        flex-basis: 100%;
+        margin-left: 5px;
+    }
+}
+
+
 
 /*CTA*/
-
 .cta {
     background: black;
     position: relative;
@@ -164,6 +294,23 @@ nav button {
     line-height: 1.6;
     color: grey;
     max-width: 60ch;
+}
+
+@media(max-width: 35em){
+    .cta {
+        background: black;
+        padding: 0 1rem;
+        min-height: 40vh;
+    }
+
+    .cta h1 {
+        color: whitesmoke;
+        margin-top: 10px;
+        font-size: 31px;
+        font-family: 'Prata', serif;
+        font-weight: 400;
+    }
+    
 }
 
 
