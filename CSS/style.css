@@ -356,3 +356,15 @@ footer ul li a img {
     width: 15px;
     cursor: pointer;
 }
+
+@media (max-width: 35em){
+    footer {
+        position: relative;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1%;
+        height: 5vh;
+    }
+}
