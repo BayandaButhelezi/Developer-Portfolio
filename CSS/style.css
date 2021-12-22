@@ -16,7 +16,7 @@ body {
 
 .flex{
     display: flex;
-    gap: var(--gap, 2rem);
+    gap: var(--gap, 1rem);
 }
 
 /*primary-header*/
@@ -60,6 +60,10 @@ button{
 }
 
 @media (max-width: 35em){
+
+    .logo{
+        color: whitesmoke;
+    }
     .primary-navigation{
         z-index: 1000;
         gap: 4em;
@@ -91,7 +95,7 @@ button{
         background: url(menu.svg);
         border: none;
         top: 1rem;
-        right: 2rem;
+        right: 1rem;
         z-index: 9999;
     }
 }
@@ -108,6 +112,7 @@ button{
 
 .first .help {
     margin-top: 5%;
+    margin-left: 2%;
     font-family: 'Prata', serif;
     font-weight: 400;
     font-size: 45px;
@@ -116,6 +121,7 @@ button{
 }
 
 .first p {
+    margin-left: 2%;
     color: grey;
     max-width: 60ch;
 }
