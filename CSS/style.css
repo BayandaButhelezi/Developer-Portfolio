@@ -112,7 +112,6 @@ button{
 
 .first .help {
     margin-top: 5%;
-    margin-left: 2%;
     font-family: 'Prata', serif;
     font-weight: 400;
     font-size: 45px;
@@ -121,7 +120,6 @@ button{
 }
 
 .first p {
-    margin-left: 2%;
     color: grey;
     max-width: 60ch;
 }
@@ -166,6 +164,10 @@ button{
     cursor: pointer;
 }
 
+.projects p{
+    margin-bottom: 2em;
+}
+
 .first-box {
     flex-basis: 50%;
     position: relative;
@@ -189,6 +191,10 @@ button{
         font-family: 'Prata', serif;
         font-weight: 400;
         cursor: pointer;
+    }
+
+    .projects p{
+        margin-bottom: 2em;
     }
 
     .first-box{
@@ -217,8 +223,9 @@ button{
 .second {
     background: rgb(44, 44, 44);
     position: relative;
-    padding: 0 4rem;
+    padding: 0 1.5rem;
     max-width: 90rem;
+    margin: 2em;
 }
 
 .text {
@@ -250,8 +257,7 @@ button{
     .second {
         background: rgb(44, 44, 44);
         position: relative;
-        padding: 0 1rem;
-        max-width: 90rem;
+        margin-left: -10px;
     }
 
     .text{
@@ -261,12 +267,11 @@ button{
     .left{
         flex-basis: 100%;
         margin-top: 50px;
-        margin-left: 5px;
     }
 
     .right{
         flex-basis: 100%;
-        margin-left: 5px;
+        margin-left: -5px;
     }
 }
 
@@ -276,7 +281,7 @@ button{
 .cta {
     background: black;
     position: relative;
-    padding: 0 4rem;
+    padding: 0 3rem;
     min-height: 40vh;
 }
 
